@@ -11,4 +11,3 @@ This is a demonstration application that provides:
 ## Known Issues
 
 * Tag autocompletion only recognizes the following special characters: `.` `,` `-` `(` `)`
-* Alphabetic characters outside the English alphabet are not handled
