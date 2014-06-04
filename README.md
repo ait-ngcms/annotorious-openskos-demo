@@ -10,5 +10,5 @@ This is a demonstration application that provides:
 
 ## Known Issues
 
-* Only the following special characters can be used: `. , - ( )`
-* Alphabetic characters outside the english alphabet are not handled
+* Tag autocompletion only recognizes the following special characters: `.` `,` `-` `(` `)`
+* Alphabetic characters outside the English alphabet are not handled
