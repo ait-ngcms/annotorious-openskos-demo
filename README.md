@@ -13,3 +13,4 @@ An online version is hosted at [http://ait-ngcms.github.io/annotorious-openskos-
 ## Known Issues
 
 * Tag autocompletion only recognizes the following special characters: `.` `,` `-` `(` `)`
+* Internet Explorer is not officially supported (Annotorious limitation)
