@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Europeana OpenSKOS Image Annotation Demo</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="annotorious-openskos-demo/europeana-api-search.js"></script>
+    <link rel="stylesheet" href="annotorious-openskos-demo/annotorious-openskos-demo.css" />
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Europeana OpenSKOS Image Annotation Demo</h1>
+    </div>
+    
+    <div id="center">
+      <form onsubmit="queryEuropeana(document.getElementById('collection').value, document.getElementById('searchField').value); return false;">
+        <table>
+          <tr>
+            <td class="label">Search Europeana</td>
+            <td><input type="text" id="searchField" autocomplete="off" /></td>
+          </tr>
+          
+          <tr>
+            <td class="label">in Collection</td>
+            <td>
+              <!-- TODO provide a list of collections we know have full-res images! -->
+              <select id="collection">
+                <option>10106_Ag_EU_STERNA_48</option>
+                <option>9200122_Ag_EU_TEL_a0031_KB</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Search!"></td>
+          </tr>
+        </table>        
+      </form>
+      
+      <div id="resultContainer"></div>
+    </div>
+    <div id="footer">
+      <img src="annotorious-openskos-demo/europeana-logo.png">
+    </div>
+  </body>
+</html>

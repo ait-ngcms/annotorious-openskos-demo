@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Annotorious Example Page</title>
+    <link rel="stylesheet" href="annotorious/theme-dark/annotorious-dark.css" />
+    <link rel="stylesheet" href="annotorious-openskos-demo/anno-openskos-plugin/anno-openskos-plugin.css" />
+    <link rel="stylesheet" href="annotorious-openskos-demo/annotorious-openskos-demo.css" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="annotorious/annotorious.min.js"></script>
+    <script src="annotorious-openskos-demo/anno-openskos-plugin//anno-openskos-plugin.js"></script>
+    <script src="http://annotorious.github.com/latest/anno-parse-plugin.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    <script>
+      anno.addPlugin('OpenSKOS', { endpoint_url: 'http://data.beeldengeluid.nl' });
+      anno.addPlugin('Parse', { app_id: 'oJyv0lbztHC3AkStWdG618IHMdY2HT5pT5xonXA2', js_key: '2YriFPirocI6H2A17xV7n0zsCnSe7iChWM6jcNu1' });
+      
+      $(document).ready(function() {
+        var getURLParameter = function(sParam) {
+          var sPageURL = window.location.search.substring(1);
+          var sURLVariables = sPageURL.split('&');
+          for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam) {
+              return sParameterName[1];
+            }
+          }
+          return "";
+        };
+
+        var imgSrc = decodeURIComponent(getURLParameter("img"));
+        if (!imgSrc) {
+          imgSrc = "640px-Hallstatt.jpg";
+        }
+        var image = $('<img src="' + imgSrc + '" class="annotatable">');
+        $('#annotatable-image').html(image);
+      });
+    </script>
+    <style>
+      html, body {
+        background-color:#dfdfdf;
+        min-height:100%;
+        padding:0;
+        margin:0;
+        font-family:"helvetica neue","helvetica","arial","sans-serif";
+        font-size:14px;
+        line-height:22px;
+      }
+
+      h2 {
+        margin-top:40px;
+      }
+      
+      #header {
+        min-height:70px;
+      }
+      
+      #header h1 {
+        margin:0;
+      }
+      
+      #header img {
+        position:absolute;
+        right:20px;
+        top:10px;
+        max-height:90px;
+      }
+      
+      #center {
+        position:relative;
+      }
+      
+      #annotatable-image div {
+        text-align:left;
+      }
+      
+      #annotatable-image img {
+        max-width:1200px;
+        max-height:700px;
+      }
+
+      a {
+        color:#333;
+      }
+
+      .column {
+        width:60%;
+        min-width:800px;
+        margin:0 auto;
+        padding:10px 40px 80px 40px;
+        background-color:#eaeaea;
+        min-height:100%;
+        border-width:0px 1px;
+        border-style:solid;
+        border-color:#dadada;
+      }
+
+      .image-caption {
+        line-height: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+      }
+    </style>    
+  </head>
+  <body>
+    <div id="header">
+      <img src="annotorious-openskos-demo/europeana-logo.png">
+      <h1 style="padding-top:20px;">Europeana OpenSKOS Image Annotation Demo</h1>
+    </div>
+    
+    <div id="center">
+      <div id="annotatable-image"></div> 
+    </div>
+  </body>
+</html>

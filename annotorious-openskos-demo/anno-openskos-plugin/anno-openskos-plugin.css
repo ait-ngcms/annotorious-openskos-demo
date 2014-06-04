@@ -1,0 +1,121 @@
+.openskos-editor-container {
+  background:url('openskos-editor-container.png');
+  padding:4px 10px;
+}
+
+.openskos-editor-container input[type='text'] {
+  color:#333;
+  width:100%;
+  padding:3px 2px;
+  border:1px solid #5f5f5f;  
+  box-sizing:border-box;
+  margin:0;
+  background-color:#a2a2a2;
+  background-image:-webkit-linear-gradient(top, #a2a2a2, #e2e2e2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image:linear-gradient(to bottom, #a2a2a2, #e2e2e2); 
+}
+
+.openskos-editor-container input[type='text']::-webkit-input-placeholder {
+  color:#626262;
+}
+.openskos-editor-container input[type='text']:-moz-placeholder {
+  color:#626262;
+  opacity:1;
+}
+.openskos-editor-container input[type='text']::-moz-placeholder {
+  color:#626262;
+  opacity:1;
+}
+.openskos-editor-container input[type='text']:-ms-input-placeholder {
+  color:#626262;
+}
+
+.openskos-editor-container ul {
+  margin:0;
+  padding:0;
+}
+
+/** Grabbed from the default jQuery UI CSS **/
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.ui-menu {
+  list-style: none outside none;
+}
+    
+.ui-widget-content {
+  border: 1px solid #aaa;
+  background:#fff;
+}
+    
+.ui-front {
+  z-index: 100;
+}
+    
+.ui-autocomplete {
+  margin:0;
+  padding:0;
+  position: absolute;
+}
+
+ul.ui-autocomplete li {
+  margin:0;
+  padding:0;
+}
+
+ul.ui-autocomplete a {
+  display:block;
+  padding:2px 6px;
+}
+
+.ui-state-focus {
+  background-color:#ddd;
+}
+
+ul.ui-autocomplete .highlight {
+  font-weight:bold;
+  text-decoration: underline;
+}
+
+ul.ui-autocomplete em {
+  color:#aaa;
+}
+
+.openskos-tag {
+  margin:2px 4px 2px 0px;
+  line-height:140%;
+  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size:12px;
+  background-color:#383838;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -khtml-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #888;
+  color:#ccc;
+  text-decoration:none;
+  display:inline-block;
+  padding:2px 4px;
+}
+
+a.openskos-tag-remove {
+  color:#fff;
+  font-weight:bold;
+  padding-left:4px;
+  cursor:pointer;
+}
+
+.openskos-tag:hover {
+  background-color:#484848;
+}
