@@ -7,6 +7,8 @@ This is a demonstration application that provides:
 * free-text annotation of images powered by [Annotorious](http://annotorious.github.io) and tagging with controlled
   vocabulary terms from [OpenSKOS](http://openskos.org)
 
+An online version is hosted at [http://ait-ngcms.github.io/annotorious-openskos-demo](http://ait-ngcms.github.io/annotorious-openskos-demo).
+
 
 ## Known Issues
 
