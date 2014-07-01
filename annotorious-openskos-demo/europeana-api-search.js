@@ -1,6 +1,6 @@
 window.queryEuropeana = function(collection, query) {
-  console.log(collection);
-  console.log(query);
+  console.log("find results for collection: " + collection);
+  console.log("find results that contain the term: " + query);
   
   var list = $("<ul><li class=\"spinner\"><img src=\"annotorious-openskos-demo/ajax-loader.gif\"></li></ul>");
   $("#resultContainer").html(list);
@@ -19,7 +19,7 @@ window.queryEuropeana = function(collection, query) {
       list.html("");
       if (jsonResponse.items) {
         for (var i = 0; i < jsonResponse.items.length; i++) {
-          console.log(jsonResponse.items[i].id);
+          console.log("processing result: " + jsonResponse.items[i].id);
           list.append("<li data-id=\"" + jsonResponse.items[i].id + "\">" +
               "<span class=\"link\"><img src=\"annotorious-openskos-demo/ajax-loader.gif\"></span>" +
               "<span class=\"title\">" + jsonResponse.items[i].title[0] + "</span>" +
@@ -33,7 +33,7 @@ window.queryEuropeana = function(collection, query) {
               wskey: "DeVWRDmwJ",
             },
             success: function( jsonResponse2 ) {
-              console.log(jsonResponse2.object.aggregations[0].edmIsShownBy);
+              console.log("result address: " + jsonResponse2.object.aggregations[0].edmIsShownBy);
               $('*[data-id="' + jsonResponse2.object.about + '"] .link').html("<a href=\"annotation.html?img=" +
                   encodeURIComponent(jsonResponse2.object.aggregations[0].edmIsShownBy) + "\"><span class=\"icon\">&#xf02c;</span> Annotate this Image</a>");
             }
