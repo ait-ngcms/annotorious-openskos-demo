@@ -1,6 +1,10 @@
 annotorious.plugin.OpenSKOS = function(opt_config_options) {
-  console.log(opt_config_options.endpoint_url);
-  this.endpoint_url = opt_config_options.endpoint_url; 
+  console.log("OpenSKOS endpoint: " + opt_config_options.endpoint_url);
+  console.log("OpenSKOS institution: " + opt_config_options.institution);
+  console.log("OpenSKOS collection: " + opt_config_options.collection);
+  this.endpoint_url = opt_config_options.endpoint_url;
+  this.institution = opt_config_options.institution;
+  this.collection = opt_config_options.collection;
 }
 
 annotorious.plugin.OpenSKOS.prototype.onInitAnnotator = function(annotator) {
@@ -17,7 +21,8 @@ annotorious.plugin.OpenSKOS.prototype.onInitAnnotator = function(annotator) {
       jsonp: "callback",
       dataType: "jsonp",
       data: {
-        q: "prefLabelText:" + searchTerm + " OR altLabelText:" + searchTerm,
+        q: "(prefLabelText:" + searchTerm + " OR altLabelText:" + searchTerm + ")" +
+           " AND tenant:" + self.institution + " AND collection:" + self.collection,
         rows: 100,
         format: "jsonp"
       },
